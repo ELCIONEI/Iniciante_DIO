@@ -1,0 +1,219 @@
+/* RESET */
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+	vertical-align:baseline;
+	text-decoration: none;
+}
+a{
+	text-decoration: none;
+	text-transform: none;
+}
+body{
+	background: #01FFCD;
+}
+
+/******************************************************
+		1 - HEADER
+*******************************************************/
+#header{
+	height: 100px;
+	margin-bottom: 5px;
+}
+
+#logo{
+	display: inline-block;
+    height: 80px;
+    margin: 25px 20px 0;
+    width: 33%;
+}
+
+	#logo img{
+		display: inline-block;
+    	float: left;
+    	height: 65px;
+	}
+
+#login{
+	border-left: 2px solid;
+    display: inline-block;
+    float: right;
+    height: 70px;
+    margin: 15px 0 0;
+    width: 25%;
+}
+
+	#login p{
+		display: inline-block;
+    	float: left;
+    	margin: 25px 10px 0;
+    	font-weight: bold;
+	}
+
+		#login p > label{
+			text-decoration: underline;
+			font-weight: bold;
+
+		}
+	
+		#login img{
+			display: inline-block;
+			height: 40px;
+			width: 40px;
+			float: left;
+			cursor: pointer;
+		}
+	
+
+#nav{
+	background: #FFCC00;
+	height: 50px; 
+	width: 100%;
+}
+
+	#navigation{
+		width: 60%;
+		margin-left: 10px;
+	}
+
+	#navigation li{
+		background: #feffff;
+	    border-radius: 5px;
+	    border: 1px solid #C5C5C5;
+	    color: #000;
+	    display: inline-block;
+	    margin: 10px 15px 0 0;
+	    padding: 5px 15px;
+	}
+
+		#navigation li > a{
+			color: #000;
+		}	
+
+/******************************************************
+		CHAMADOS
+*******************************************************/
+#content {
+	display: block;
+	margin: 25px 0 0 20px;
+    /*width: 110%;*/
+}
+
+	#content section{
+		display: inline-block;
+		/*margin: 0px 10px -116px 17px;*/
+		/*position: relative;*/
+	}
+
+	#section-left {
+		width: 270px;
+		height: 150px;
+		text-align: center;
+		margin-right: 20px;
+		background-color: #ccc;
+		float: left;
+	}
+
+	#historico {
+		background-color: purple;
+		font-size: 18px;
+		height: 32px;
+	}
+
+	#historico_dados {
+		margin-top: 30px;
+	}
+
+
+	#content b {
+		display: block;
+		padding-right: 110px;
+		text-align: center;
+		color: #000;
+	}
+
+#table-os {
+	text-align: center;
+	width: 1018px;
+	margin-top: -2px;
+	background-color: #f0f0f0;
+}
+
+#table-os td {
+	height: 32px;
+}
+
+.bg_color_fundo1 {
+	background-color: #ccc;
+}
+
+.bg_color_fundo2 {
+	background-color: white;
+}
+
+.bg_color_purple{
+	background-color: purple;
+}
+
+#font_18 {
+	font-size: 18px;
+}
+
+
+/******************************************************
+		Imagens do index
+*******************************************************/
+#img_index {
+	width: 100px;
+	height: 100px;
+	border: solid #ccc 1px;
+}
+
+
+/******************************************************
+		Colore a opção selecionada no 
+		menu superior
+*******************************************************/
+#selecionado > li {
+	background-color: purple;
+}
+
+/******************************************************
+		Formulário do cadastro de usuários
+*******************************************************/
+#content-cadastro {
+	margin: 20px 0px 0px 20px;
+}
+
+#cad-title {
+	text-decoration: underline;
+}
+
+#cadastro-usr {
+	margin-top: 20px;
+}
+
+	.cad-n {
+		width: 70px;
+		display: inline-block;
+		margin: 0px 10px 15px 0px;
+	}
+
+	.cad-input {
+		width: 300px;
+		height: 24px;
+		margin: 0px 0px 0px 10px;
+	}
+
+	.cad-input-cmb {
+		width: 302px;
+		height: 26px;
+		margin: 0px 0px 0px 10px;
+	}
+
+	.cancelar {
+		margin: -25px 0px 0px 93px;
+		float: left;
+	}
+
