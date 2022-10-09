@@ -1,0 +1,34 @@
+-----------------Projeto-2-------------------
+
+root@servidor1: ~# cd/
+root@servidor1:/#  ls
+
+root@servidor1:/#  mkdir /scripts2
+root@servidor1:/#  cd /scripts2/
+root@servidor1:/ scripts2# 
+root@servidor1:/ scripts2#  ls
+root@servidor1:/ scripts2#  nano script-iac2.sh
+
+#!/bin/bash
+
+echo "Atualizando o servidor..."
+
+apt-get update
+apt-get upgrade -y
+apt-get install apache2 -y
+apt-get install unzip -y
+
+cd /tmp...  arquivos da aplicação)
+cd (acessar os arquivos)
+cp -R * /var/www/html/      Pasta padrão do apache (copiar todos os arquivos para este endereço)
+
+ctrl O   - para salvar
+root@servidor1:/ scripts2# chmod *x script-iac2.sh (permissao para execução)
+
+root@servidor1:/ scripts2# ls -l
+
+root@servidor1:/ scripts2# 
+
+
+root@servidor1: / scripts2#  ./script- iac2.sh    (executar script)
+
