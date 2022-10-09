@@ -1,0 +1,61 @@
+------------------------------------PROJETO------
+---------checar usuarios.
+
+root@servidor1: /# cat /etc/passwd
+
+--------deletando grupos
+
+root@servidor1: /# groupdel GRP_ADM
+root@servidor1: /# groupdel GPR_VEN
+
+----------na pasta script
+root@servidor1: /# cd  /scripts/
+root@servidor1: / scripts# nano iacl.sh
+
+#!/bin/bash
+echo "criando diretorios...."
+
+mkdir /publico
+mkdir /adm
+mkdir /ven
+mdir /sec
+
+echo "criando grupos....."
+
+groupadd GRP_ADM
+groupadd GRP_VEN
+groupadd GRP_SEC
+
+echo "criando usuarios...."
+
+useradd carlos -m -s /bin/bash -p $(openssl passwd -cript Senha123) -G GRP-ADM
+useradd maria -m -s /bin/bash -p $(openssl passwd -cript Senha123)  -G GRP-ADM
+useradd joao -m -s /bin/bash -p $(openssl passwd -cript Senha123)  -G GRP-ADM
+
+useradd debora -m -s /bin/bash -p $(openssl passwd -cript Senha123)  -G GRP-VEN
+useradd sebastiana -m -s /bin/bash -p $(openssl passwd -cript Senha123) -G GRP-VEN
+useradd roberto -m -s /bin/bash -p $(openssl passwd -cript Senha123) -G GRP-VEN
+
+
+useradd josefina -m -s /bin/bash -p $(openssl passwd -cript Senha123)  -G GRP-SEC
+useradd amanda -m -s /bin/bash -p $(openssl passwd -cript Senha123)  -G GRP-SEC
+useradd rogerio -m -s /bin/bash -p $(openssl passwd -cript Senha123)  -G GRP-SEC
+
+
+echo "Permissoes....."
+
+chown root:GRP-ADM /admin
+chown root:GRP-VEN /ven
+chown root:GRP-SEC /sec
+
+chmod 770 /adm
+chmod 770 /ven
+chmod 770 /sec
+chmod 777 /publico
+
+echo "FIM....."
+
+-------execuntando script
+
+root@servidor1: / scripts#  ./ iacl.sh
+
