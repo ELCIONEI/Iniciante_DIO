@@ -1,0 +1,77 @@
+config.vm.define "vmsuper" do |vmsuper|
+
+  vmsuper.vm.provision "shell",
+      inline: "echo vmsuper > /etc/hostname && \
+                hostname vmsuper"
+
+  vmsuper.vm.provision "shell", inline: "cat /vagrant/configs/focal.pub >> .ssh/authorized_keys"
+
+  vmsuper.vm.network "public_network" ,
+    bridge: "enp2s0",
+    ip: "192.168.56.1"
+
+  vmsuper.vm.provision "shell", inline: $docker_script
+
+  vmsuper.vm.provider "virtualbox" do |vmsuper|
+      vmsuper.memory = 512
+      vmsuper.cpus = 1
+      vmsuper.name = "vmsuper"
+
+
+
+  end
+
+ end
+
+
+ # VM DOCKER 2
+   config.vm.define "vmnode1" do |vmnode1|
+
+     vmnode1.vm.provision "shell",
+         inline: "echo vmnode1 > /etc/hostname && \
+                   hostname vmnode1"
+
+     vmnode1.vm.provision "shell", inline: "cat /vagrant/configs/focal.pub >> .ssh/authorized_keys"
+
+     vmnode1.vm.network "public_network" ,
+       bridge: "enp2s0",
+       ip: "192.168.56.1"
+
+     vmnode1.vm.provision "shell", inline: $docker_script
+
+     vmnode1.vm.provider "virtualbox" do |vmnode1|
+         vmnode1.memory = 512
+         vmnode1.cpus = 1
+         vmnode1.name = "vmnode1"
+
+
+
+     end
+
+    end
+
+    # VM DOCKER 3
+      config.vm.define "vmnode2" do |vmnode2|
+
+        vmnode2.vm.provision "shell",
+            inline: "echo vmnode2 > /etc/hostname && \
+                      hostname vmnode2"
+
+        vmnode2.vm.provision "shell", inline: "cat /vagrant/configs/focal.pub >> .ssh/authorized_keys"
+
+        vmnode2.vm.network "public_network" ,
+            bridge: "enp2s0",
+            ip: "192.168.56.1"
+
+        vmnode2.vm.provision "shell", inline: $docker_script
+
+        vmnode2.vm.provider "virtualbox" do |vmnode2|
+            vmnode2.memory = 512
+            vmnode2.cpus = 1
+            vmnode2.name = "vm3"
+
+
+
+        end
+
+       end
